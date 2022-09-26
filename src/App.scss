@@ -1,0 +1,65 @@
+$border-radius: 15px;
+
+body {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    background-color: #3D6999;
+}
+
+#drum-machine {
+    background-color: rgb(49, 46, 46);
+    padding: 20px;
+    border-radius: $border-radius;
+
+    .text-displayed {
+        display: grid;
+        justify-content: center;
+        width: 464px;
+        height: 80px;
+        margin-bottom: 15px;
+        background-color: rgba($color: #CC2314, $alpha: 0.9);
+        border-radius: $border-radius;
+        
+    }
+    
+    #display {
+        h1 {
+            position: absolute;
+            top: 2%;
+            left: 49.1%;
+        }
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 5px;
+    
+        .drum-pad {
+            width: 150px;
+            height: 150px;
+            border-radius: $border-radius;
+            font-size: 28px;
+        }
+        .drum-pad:hover {
+            background-color: #00ffff;
+        }
+    }
+}
+
+@media (max-width: 505px) {
+    #drum-machine {
+        .text-displayed {
+            width: 270px;
+        }
+        #display {
+            gap: 1%;
+            .drum-pad {
+                width: 90px;
+                height: 90px;
+            }
+        }
+    }
+}
+
+
